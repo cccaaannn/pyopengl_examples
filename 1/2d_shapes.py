@@ -84,12 +84,8 @@ def draw2d():
     glBegin(GL_LINES)
     for edge in edges:
         for corner in edge:
-            glVertex2fv(corners[corner])
+            glVertex2fv(corners[corner]) # there is a v at the end of the function because we are pasing array ex:[0,1]
     glEnd()
-
-
-
-
 
 
 
@@ -121,6 +117,7 @@ while True:
     draw2d()
 
 
+    # pygame.display.update()
     pygame.display.flip() # this has to be filp instead of update for opengl
     pygame.time.wait(10) # limit the frame rate
 
